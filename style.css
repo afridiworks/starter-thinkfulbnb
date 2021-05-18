@@ -5,20 +5,22 @@ body {
 }
 
 h2 {
-  font-size: 26px;
-  font-weight: 400;
+  font-size: 36px;
+  font-weight: 600;
   margin: 0 10px 10px 10px;
   text-align: center;
 }
 
 h3 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 p {
   line-height: 1.5em;
   margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 section {
@@ -64,17 +66,24 @@ header {
   color: #fff;
 }
 
-header nav {
-  display: flex;
-  justify-content: center;
+.centered {
+  display: block;
+  text-align: center;
 }
 
 header nav ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+  padding-left: 0px;
 }
 
 header nav ul li {
+  font-size: 15pt;
   list-style-type: none;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 header nav ul li a {
@@ -89,31 +98,45 @@ header nav ul li a:hover {
 }
 
 /* -------  Search Form ------- */
+
+.inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 form {
+  display: flex;
+  text-align: left;
+  margin: auto;
+  width: 80%;
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 25px;
 }
 
 form label {
   font-weight: bold;
-}
-
-form div {
-  display: flex;
-  justify-content: space-between;
+  font-size: 13pt;
+  padding: 0px;
+  flex-wrap: wrap;
 }
 
 form select,
 form input {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
-  width: 180px;
+  width: 100%;
 }
 
 form button {
   background-color: #ff385c;
+  display: flex;
+  justify-content: center;
   border: none;
   color: #fff;
   font-size: 24px;
+  margin: auto;
   padding: 15px;
   width: 100%;
 }
@@ -132,44 +155,81 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
+@media all and (max-width: 380px) {
+  .logo {
+    font-size: 60px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .logo {
+    text-align: left;
+  }
+
+  .middle {
+    display: flex;
+    align-items: center;
+  }
+
+  .vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    margin-top: 25px;
+    padding-left: 100px;
+    width: 100%;
+  }
+
+  .centered {
+    display: flex;
+    margin: 20px 15px 25px 15px;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0;
   }
 
-  .logo {
-    margin: 14 px 0 14px 20px;
-    padding-top: 0;
-    font-size: 42px;
+  form {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  header nav ul {
-    align-items: center;
+  form input,
+  form select {
+    width: 75%;
+    position: relative;
+    height: 25px;
+    top: 7px;
+    left: 10px;
+    margin-right: 10px;
+  }
+
+  form button {
+    float: right;
+    padding: 20px;
+    width: 175px;
+  }
+
+  .inline {
+    display: block;
+    margin-top: 15px;
   }
 
   .group {
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
   }
 
-  form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  form div {
-    flex-direction: column;
-  }
-
-  form button {
-    flex: 1;
-  }
-
-  form select,
-  form input {
-    margin-bottom: 0px;
+  img {
+    width: 100%;
+    padding: 0px;
   }
 }
