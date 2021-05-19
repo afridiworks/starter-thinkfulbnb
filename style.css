@@ -27,7 +27,7 @@ section {
 
 section.alternate-background {
   background-color: #00a699;
-  color: #fff;
+  color: black;
 }
 
 main img {
@@ -54,19 +54,23 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 0 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 50px;
+  font-size: 72px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul {
   display: flex;
-  justify-content: center;
 }
 
 header nav ul li {
@@ -79,10 +83,6 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
-header nav ul li:last-child a {
-  margin-right: 20px;
-}
-
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
@@ -90,9 +90,6 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border: 2px solid #ff385c;
   padding: 10px;
 }
@@ -101,11 +98,15 @@ form label {
   font-weight: bold;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 form select,
 form input {
   margin-bottom: 20px;
-  width: 65%;
-  float: right;
+  width: 180px;
 }
 
 form button {
@@ -131,54 +132,44 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) {
   header {
-    background-color: #ff385c;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    padding: 0;
   }
 
-  header nav {
-    padding: 10px;
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
   }
 
-  form {
-    flex-direction: row;
-  }
-
-  .group {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-flow: row nowrap;
+  header nav ul {
     align-items: center;
   }
 
-  .vacation-form .item {
-    display: flex block;
-    flex: 1 1 auto;
-    flex-direction: column;
-  }
-
-  .item label,
-  .item input,
-  .item select,
-  .item button {
-    display: flex;
-    width: 100%;
-  }
-
-  .grid-column {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  .grid-row {
-    display: flex;
-    flex: 1;
+  .group {
     flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+
+  form select,
+  form input {
+    margin-bottom: 0px;
   }
 }
