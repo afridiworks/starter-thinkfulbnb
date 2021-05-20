@@ -158,6 +158,10 @@ footer p {
     align-items: center;
   }
 
+  header nav ul li a {
+    font-size: 18px;
+  }
+
   .group {
     flex-direction: row;
     align-items: center;
