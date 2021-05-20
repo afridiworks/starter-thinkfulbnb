@@ -44,10 +44,7 @@ main img {
 .item {
   flex: 1;
   margin: 10px;
-}
-
-.item-double {
-  flex: 2;
+  width: 80%;
 }
 
 /* -------  Navigation ------- */
@@ -60,7 +57,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 60px;
   color: #fff;
 }
 
@@ -96,6 +93,8 @@ form {
 
 form label {
   font-weight: bold;
+  display: inline-block;
+  width: 100px;
 }
 
 form div {
@@ -106,7 +105,7 @@ form div {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 100%;
 }
 
 form button {
@@ -115,7 +114,6 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
-  width: 100%;
 }
 
 /* -------  Footer ------- */
@@ -129,6 +127,9 @@ footer p {
   text-align: center;
   padding: 20px;
 }
+.item-double input {
+  max-width: 100px;
+}
 
 /* -------  Media Query ------- */
 
@@ -137,6 +138,10 @@ footer p {
     display: flex;
     justify-content: space-between;
     padding: 0;
+  }
+
+  main img {
+    width: 100%;
   }
 
   .logo {
@@ -157,19 +162,22 @@ footer p {
   form {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   form div {
     flex-direction: column;
   }
 
-  form button {
-    flex: 1;
-  }
-
   form select,
   form input {
     margin-bottom: 0px;
+    width: auto;
+  }
+  .item-double {
+    width: 10%;
+  }
+  .item-double input {
+    max-width: auto;
   }
 }
