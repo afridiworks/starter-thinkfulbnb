@@ -6,6 +6,6 @@ This project was completed as part of the Thinkful curriculum for a Software Eng
 
 
 ## Link
-[I'm an inline-style link with title](https://mariaafridi1.github.io/starter-thinkfulbnb "Thinkfulbnb)
+(https://mariaafridi1.github.io/starter-thinkfulbnb) "Thinkfulbnb"
 
 
